@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, TextInput, ScrollView, FlatList, Alert, Touchab
 import Header from './components/header';
 import DeedsItem from './components/deedsitem';
 import AddDeed from './components/adddeed';
+import Sandbox from './components/sandbox';
 
 export default function App() {
   const [deeds, setDeeds] = useState([
@@ -33,6 +34,7 @@ export default function App() {
   }
 
   return (
+    //<Sandbox/>
     <TouchableWithoutFeedback onPress={() => {
       Keyboard.dismiss();
     }}>
@@ -60,9 +62,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   content: {
+    backgroundColor: '#fff',
     padding: 40,
+    flex:1,
   },
   list: {
+    flex: 1,
     marginTop: 20,
+    backgroundColor:'#fff',
   }
 });
